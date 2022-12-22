@@ -26,7 +26,7 @@ public class HotelController {
     public ResponseEntity<Hotel> saveHotel(@RequestBody Hotel hotel) {
         log.info("/* inside the HotelController, hotel {} */ ", hotel);
         Hotel saveHotel = hotelService.saveHotel(hotel);
-        log.info("/* saved Successfully , hotel {} */ ", saveHotel);
+        log.info("/* saved Successfully, hotel {} */ ", saveHotel);
         return ResponseEntity.status(HttpStatus.CREATED).body(saveHotel);
     }
 
